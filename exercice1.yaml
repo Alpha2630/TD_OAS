@@ -1,3 +1,17 @@
 openapi: 3.0.3
 info :
   title: Ping API
+  version: 1.0.0
+  description: API avec une route GET/ping
+paths:
+  /ping:
+    get:
+      summary: Healthchek
+      responses:
+        '200':
+          description: Retourne "pong" en texte brute
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: pong
